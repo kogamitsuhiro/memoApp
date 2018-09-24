@@ -1,18 +1,15 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import Appbar from './src/components/Appbar';
 import MemoList from './src/components/MemoList';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-
-        <View style={styles.appbar}>
-          <View>
-            <Text style={styles.appbarTitle}>MEMOT</Text>
-          </View>
-        </View>
+      
+        <Appbar />
         <MemoList />
         <View style={styles.memoAddButton}>
             <Text style={styles.memoAddButtonTitle}>+</Text>
@@ -29,26 +26,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop: 78,
-  },
-  appbar: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    height: 78,
-    paddingTop: 30,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#265366',
-    shadowColor: '#000',
-    shadowOffset: {width: 0, height: 0},
-    shadowOpacity: 1,
-    shadowRadius: 3,
-    zIndex: 10,
-  },
-  appbarTitle: {
-    color: '#fff',
-    fontSize: 18,
   },
   memoAddButton: {
     position: "absolute",
