@@ -20,7 +20,7 @@ export default class MemoDetailScreen extends React.Component {
                         講座のアイデアです。
                     </Text>
                 </View>
-                <CircleButton color="white" style={styles.editButton}>
+                <CircleButton color="white" style={styles.editButton} onPress={() => { this.props.navigation.navigate('Home'); }}>{/*MemoEditを指定した時のみだけ挙動がおかしい*/}
                     {'\uf040'}
                 </CircleButton>
             </View>

@@ -8,7 +8,7 @@ export default class MemoListScreen extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <MemoList />
+                <MemoList navigation={ this.props.navigation }/>
                 <CircleButton>
                     {'\uf067'}
                 </CircleButton>

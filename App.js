@@ -10,10 +10,10 @@ import SignupScreen from './src/screens/SignupScreen';
 
 const App = StackNavigator({
   Home: { screen: MemoListScreen },
-  MemoDetail: { screen: MemoDetailScreen},
-  MemoEdit: { screen: MemoEditScreen},
-  Login: { screen: LoginScreen},
-  Signup: { screen: SignupScreen},
+  MemoDetail: { screen: MemoDetailScreen },
+  MemoEdit: { screen: MemoEditScreen },
+  Login: { screen: LoginScreen },
+  Signup: { screen: SignupScreen },
 }, {
   navigationOptions: {
     headerTitle: 'Memot',
