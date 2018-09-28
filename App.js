@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { StackNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
 
 import MemoListScreen from './src/screens/MemoListScreen';
 import MemoDetailScreen from './src/screens/MemoDetailScreen';
@@ -8,12 +8,16 @@ import MemoEditScreen from './src/screens/MemoEditScreen';
 import LoginScreen from './src/screens/LoginScreen';
 import SignupScreen from './src/screens/SignupScreen';
 
-const App = StackNavigator({
-  Home: { screen: MemoListScreen },
-  MemoDetail: { screen: MemoDetailScreen },
-  MemoEdit: { screen: MemoEditScreen },
-  Login: { screen: LoginScreen },
-  Signup: { screen: SignupScreen },
+// ↓これを書かないとエラーが出る
+// https://github.com/apollographql/apollo-link/issues/75#issuecomment-333328069
+GLOBAL.self = GLOBAL;
+
+const App = createStackNavigator({
+  Home: MemoListScreen,
+  MemoDetail: MemoDetailScreen,
+  MemoEdit: MemoEditScreen,
+  Login: LoginScreen,
+  Signup: SignupScreen,
 }, {
   navigationOptions: {
     headerTitle: 'Memot',
