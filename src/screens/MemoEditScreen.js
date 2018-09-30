@@ -7,7 +7,7 @@ export default class MemoEditScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <TextInput style={styles.memoEditInput} multiline="true" value="Hi" />
+        <TextInput style={styles.memoEditInput} multiline value="Hi" />
         <CircleButton>
           {'\uf00c'}
         </CircleButton>
