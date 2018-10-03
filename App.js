@@ -13,11 +13,11 @@ import SignupScreen from './src/screens/SignupScreen';
 GLOBAL.self = GLOBAL;
 
 const App = createStackNavigator({
+  Login: LoginScreen,
+  Signup: SignupScreen,
   Home: MemoListScreen,
   MemoDetail: MemoDetailScreen,
   MemoEdit: MemoEditScreen,
-  Login: LoginScreen,
-  Signup: SignupScreen,
 }, {
   navigationOptions: {
     headerTitle: 'Memot',

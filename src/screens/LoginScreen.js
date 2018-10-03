@@ -8,7 +8,7 @@ export default class LoginScreen extends React.Component {
         <Text style={styles.title}>ログイン</Text>
         <TextInput style={styles.input} value="Email address" />
         <TextInput style={styles.input} value="Password" />
-        <TouchableHighlight style={styles.button} title="ログイン" onPress={() => {}}>
+        <TouchableHighlight style={styles.button} title="ログイン" onPress={() => { this.props.navigation.navigate('Home'); }}>
           <Text style={styles.buttonTitle}>
             ログイン
           </Text>
