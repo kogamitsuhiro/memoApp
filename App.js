@@ -21,6 +21,8 @@ const App = createStackNavigator({
 }, {
   navigationOptions: {
     headerTitle: 'Memot',
+    headerTintColor:  '#fff',
+    headerBackTitle: null,
     headerStyle: {
       backgroundColor: '#265366',
     },
