@@ -17,6 +17,7 @@ export default class LoginScreen extends React.Component {
           onChangeText={(text) => { this.setState({ email: text }); }}
           autoCapitalize="none"
           autoCorrect={false}
+          placeholder="Email"
         />
         <TextInput
           style={styles.input}
@@ -24,6 +25,8 @@ export default class LoginScreen extends React.Component {
           onChangeText={(text) => { this.setState({ password: text }); }}
           autoCapitalize="none"
           autoCorrect={false}
+          placeholder="Password"
+          secureTextEntry
         />
         <TouchableHighlight style={styles.button} title="ログイン" onPress={() => { this.props.navigation.navigate('Home'); }}>
           <Text style={styles.buttonTitle}>
