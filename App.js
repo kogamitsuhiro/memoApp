@@ -4,13 +4,18 @@ import firebase from 'firebase';
 import MemoListScreen from './src/screens/MemoListScreen';
 import MemoDetailScreen from './src/screens/MemoDetailScreen';
 import MemoEditScreen from './src/screens/MemoEditScreen';
+import MemoCreateScreen from './src/screens/MemoCreateScreen';
 import LoginScreen from './src/screens/LoginScreen';
 import SignupScreen from './src/screens/SignupScreen';
 
 import ENV from './env.json';
 
+// eslint-disable-next-line
+require("firebase/firestore");
+
 // ↓これを書かないとエラーが出る
 // https://github.com/apollographql/apollo-link/issues/75#issuecomment-333328069
+// eslint-disable-next-line
 GLOBAL.self = GLOBAL;
 
 const config = {
@@ -29,6 +34,7 @@ const App = createStackNavigator({
   Home: MemoListScreen,
   MemoDetail: MemoDetailScreen,
   MemoEdit: MemoEditScreen,
+  MemoCreate: MemoCreateScreen,
 }, {
   navigationOptions: {
     headerTitle: 'Memot',
